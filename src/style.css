@@ -1,4 +1,54 @@
 h1 {
   color: blue;
-  font-size: 500px;
+  font-size: 4.5rem;
+}
+
+.current_temp {
+  color: blue;
+}
+
+#temperature {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.unit {
+  position: relative;
+  top: -23px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.wireframe {
+  margin-top: 10px;
+  border-color: #630f0f;
+}
+
+.container {
+  background: white;
+}
+
+.weather_icon {
+  padding: 20px;
+  font-size: 4.5rem;
+}
+
+.weather_wireframe {
+  max-width: 600px;
+  border: 1px solid blue;
+  border-radius: 2%;
+}
+
+li {
+  list-style: none;
+  font-weight: 500;
+  color: blue;
+}
+
+ul {
+  list-style: none;
+  font-weight: 500;
+  color: blue;
 }

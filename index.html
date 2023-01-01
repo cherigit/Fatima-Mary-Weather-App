@@ -12,13 +12,89 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
-      <a href="" class="btn btn-primary">Search</a>
-      <script src="src/app.js"></script>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"> °C</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <small>
+          <a
+            href="https://github.com/wecodeschool/vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Matt Delac
+        </small>
+      </div>
+
+      <div class="container p-5 my-5 mt-10">
+        <div class="weather_wireframe">
+          <table class="table table-sm table-responsive-sm">
+            <thead class="table-info">
+              <tr>
+                <th></th>
+                <th></th>
+                <th>
+                  <form id="form">
+                    <input
+                      type="text"
+                      id="cityholder"
+                      placeholder="Input City"
+                    />
+                    <input type="submit" id="submitbutton" value="Submit" />
+                  </form>
+                </th>
+              </tr>
+            </thead>
+          </table>
+
+          <div class="row">
+            <div class="col-6">
+              <ul class="city_temp">
+                <li><h1 id="cityreturn">Toronto</h1></li>
+                <li><h3 id="current_date"></h3></li>
+                <li class="current_temp">
+                  <span id="temperature"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <h1 class="weather_icon">🌞</h1>
+                <li><h2>🌂 10%</h2></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
