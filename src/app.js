@@ -9,7 +9,15 @@ let mins = now.getMinutes();
 if (mins < 10) {
   mins = `0${mins}`;
 }
-let mapDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Saturday"];
+let mapDay = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 let dayandtime = mapDay[now.getDay()] + " " + hours + ": " + mins;
 
 updateCurrentDate.innerHTML = dayandtime;
