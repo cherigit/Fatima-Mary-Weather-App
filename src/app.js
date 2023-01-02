@@ -22,33 +22,6 @@ function formatDate(timestamp) {
   //return `mapDay[now.getDay()] + " " + hours + ": " + mins`;
   return `${day} ${hours}:${mins}`;
 }
-/*
-//to show current day and time
-let updateCurrentDate = document.querySelector("#current_date");
-//let now = new Date();
-console.log(now);
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let mins = now.getMinutes();
-if (mins < 10) {
-  mins = `0${mins}`;
-}
-let mapDay = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-//return `mapDay[now.getDay()] + " " + hours + ": " + mins`;
-
-//updateCurrentDate.innerHTML = dayandtime;
-*/
 
 //to change city name afterward
 function changeCity(event) {
@@ -71,11 +44,11 @@ function changeCity(event) {
 let form = document.querySelector("#form");
 form.addEventListener("submit", changeCity);
 
-// to show temperature
+// to show temperature and other details
 function showWeather(response) {
-  let temperature = Math.floor(response.data.temperature.current);
+  let temperature = Math.round(response.data.temperature.current);
   let humidity = response.data.temperature.humidity;
-  let wind = response.data.wind.speed;
+  let wind = Math.round(response.data.wind.speed);
   let description = response.data.condition.description;
   let icon = response.data.condition.icon_url;
   let lastupdated = response.data.time;

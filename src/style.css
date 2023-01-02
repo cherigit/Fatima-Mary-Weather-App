@@ -1,5 +1,5 @@
 body:first-letter {
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 }
 
 h1 {
