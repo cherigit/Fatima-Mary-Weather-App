@@ -33,10 +33,10 @@ function changeCity(event) {
 
   let x = document.getElementById("cityreturn").innerHTML;
   let city = x;
-  let urlRoot = "https://api.openweathermap.org/data/2.5/weather?";
-  let apiKey = "5aac6d0188c6f17d6d2bbe6591b6fef0";
+  let urlRoot = "https://api.shecodes.io/weather/v1/current?";
+  let apiKey = "84c6e0b933fac71ce8f9a33t197o5bd2";
   let units = "metric";
-  let url = `${urlRoot}q=${city}&appid=${apiKey}&units=${units}`;
+  let url = `${urlRoot}query=${city}&key=${apiKey}&units=${units}`;
 
   axios.get(url).then(showWeather);
 }
@@ -45,17 +45,30 @@ form.addEventListener("submit", changeCity);
 
 // to show temperature
 function showWeather(response) {
-  let temperature = Math.floor(response.data.main.temp);
-  console.log(temperature);
-  let show = document.querySelector("#temperature");
-  show.innerHTML = `${temperature}°`;
+  let temperature = Math.floor(response.data.temperature.current);
+  let humidity = response.data.temperature.humidity;
+  let wind = response.data.wind.speed;
+  let description = response.data.condition.description;
+  let icon = response.data.condition.icon_url;
+  console.log(response.data);
+  console.log(temperature, humidity);
+  let showtemp = document.querySelector("#temperature");
+  let showhumi = document.querySelector("#humidity");
+  let showwind = document.querySelector("#wind");
+  let showdesc = document.querySelector("#description");
+  let showicon = document.querySelector("#icon");
+  showtemp.innerHTML = `${temperature}°`;
+  showhumi.innerHTML = `${humidity}`;
+  showwind.innerHTML = `${wind}`;
+  showdesc.innerHTML = `${description}`;
+  showicon.setAttribute("src", `${icon}`);
 }
 
 let x = document.getElementById("cityreturn").innerHTML;
 let city = x;
-let urlRoot = "https://api.openweathermap.org/data/2.5/weather?";
-let apiKey = "5aac6d0188c6f17d6d2bbe6591b6fef0";
+let urlRoot = "https://api.shecodes.io/weather/v1/current?";
+let apiKey = "84c6e0b933fac71ce8f9a33t197o5bd2";
 let units = "metric";
-let url = `${urlRoot}q=${city}&appid=${apiKey}&units=${units}`;
+let url = `${urlRoot}query=${city}&key=${apiKey}&units=${units}`;
 
 axios.get(url).then(showWeather);

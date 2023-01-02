@@ -12,6 +12,11 @@ h1 {
   font-size: 3rem;
 }
 
+#icon {
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+
 .unit {
   position: relative;
   top: -23px;
