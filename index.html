@@ -67,6 +67,7 @@
                       type="text"
                       id="cityholder"
                       placeholder="Input City"
+                      width=250px
                     />
                     <input type="submit" id="submitbutton" value="Submit" />
                   </form>
@@ -77,19 +78,18 @@
 
           <div class="row">
             <div class="col-6">
-                <ul class="city_temp">
-                <li><h1 id="cityreturn">Toronto</h1></li>
-                <li>
-                    Last updated:
-                    <span id="current_date"></span>
-                </li>
-                <li class="current_temp">
-                    <span ></span>
-                </li>
-                <li >
-                    <span id="description"></span>
-                </li>
-                </ul>
+                <div class="city_temp">
+                    <h1 id="cityreturn">Toronto</h1>
+                    <div>
+                        Last updated:
+                        <span id="current_date"></span>
+                        <span id="last_updated"> xxx </span>
+                    </div>
+                    
+                    <div >
+                        <span id="description"></span>
+                    </div>
+                </div>
             </div>
           </div>
           <div class="row">
@@ -106,7 +106,7 @@
                         
                             <h4>
                                 <span id="temperature"></span>
-                            C|F
+                            <a href="#" id="cel_link">C</a>|<a href="#" id="fah_link">F</a>
                             </h4>
                         </span>
                     </div>                    
@@ -124,8 +124,18 @@
           
 
         </div>
-      </div>
+      <small>
+          <a
+            href="https://github.com/cherigit/Fatima-Mary-Weather-App"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Cheri Lee
+        </small>
+    
     </div>
+    </div>
+    
     </div>
     <script src="src/app.js"></script>
   </body>

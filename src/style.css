@@ -1,5 +1,5 @@
 h1 {
-  color: blue;
+  color: blue !important;
   font-size: 4.5rem;
 }
 
@@ -8,8 +8,13 @@ h1 {
 }
 
 #temperature {
+  color: blue;
   font-weight: 500;
   font-size: 3rem;
+}
+
+#description {
+  color: blue;
 }
 
 #icon {
@@ -24,6 +29,10 @@ h1 {
 
 a:link {
   text-decoration: none;
+}
+
+.city_temp {
+  padding-left: 30px;
 }
 
 .wireframe {
