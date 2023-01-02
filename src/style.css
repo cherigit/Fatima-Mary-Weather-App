@@ -13,6 +13,11 @@ h1 {
   font-size: 3rem;
 }
 
+#units {
+  position: relative;
+  top: -25px;
+}
+
 #description {
   color: blue;
 }
@@ -42,6 +47,7 @@ a:link {
 
 .container {
   background: white;
+  margin: 0 auto;
 }
 
 .weather_icon {
@@ -51,8 +57,9 @@ a:link {
 
 .weather_wireframe {
   max-width: 600px;
-  border: 1px solid blue;
-  border-radius: 2%;
+
+  border: 1px solid #dadde1;
+  border-radius: 5px;
 }
 
 li {

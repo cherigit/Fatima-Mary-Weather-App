@@ -17,43 +17,6 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li ></li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="iconzzz" class="float-left" />
-                <div class="float-left">
-                  <strong id="temperaturezzz"></strong
-                  ><span class="units"> °C</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li>Humidity: <span></span>%</li>
-                <li>Wind:  m/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <small>
-          <a
-            href="https://github.com/wecodeschool/vanilla-weather-app"
-            target="_blank"
-            >Open-source code</a
-          >
-          by Matt Delac
-        </small>
-      </div>
------------------------------------------
       <div class="container p-5 my-5 mt-10">
         <div class="weather_wireframe">
           <table class="table table-sm table-responsive-sm">
@@ -67,7 +30,7 @@
                       type="text"
                       id="cityholder"
                       placeholder="Input City"
-                      width=250px
+                      width="250px"
                     />
                     <input type="submit" id="submitbutton" value="Submit" />
                   </form>
@@ -75,56 +38,45 @@
               </tr>
             </thead>
           </table>
-
           <div class="row">
             <div class="col-6">
-                <div class="city_temp">
-                    <h1 id="cityreturn">Toronto</h1>
-                    <div>
-                        Last updated:
-                        <span id="current_date"></span>
-                        <span id="last_updated"> xxx </span>
-                    </div>
-                    
-                    <div >
-                        <span id="description"></span>
-                    </div>
+              <div class="city_temp">
+                <h1 id="cityreturn">Toronto</h1>
+                <div>
+                  Last updated:
+                  <span id="current_date"></span>
+                  <span id="last_updated"></span>
                 </div>
+                <div>
+                  <span id="description"></span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
+            <div class="row">
+              <div class="col-6">
                 <div class="row">
-                    
-                    <div class="col">
-                    <div>
-                        <img src="" id="icon"/>
-                    </div>
-                    
-                    </div>
-                    <div class="col">
-                        
-                            <h4>
-                                <span id="temperature"></span>
-                            <a href="#" id="cel_link">C</a>|<a href="#" id="fah_link">F</a>
-                            </h4>
-                        </span>
-                    </div>                    
+                  <div class="col">
+                    <img src="" id="icon" />
+                    <span class="col">
+                      <span id="temperature"></span>
+                      <span id="units">
+                        <a href="#" id="cel_link">C</a>|
+                        <a href="#" id="fah_link">F</a>
+                      </span>
+                    </span>
+                  </div>
                 </div>
-              
-            </div>
-            <div class="col">
-              <ul>
-                <li>humidity: <span id="humidity"></span>%</li> 
-                <li>Wind: <span id="wind"></span>km/h</li>
-              </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span>km/h</li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          
-
         </div>
-      <small>
+        <small>
           <a
             href="https://github.com/cherigit/Fatima-Mary-Weather-App"
             target="_blank"
@@ -132,10 +84,7 @@
           >
           by Cheri Lee
         </small>
-    
-    </div>
-    </div>
-    
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>

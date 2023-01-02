@@ -66,7 +66,7 @@ function showWeather(response) {
   showwind.innerHTML = `${wind}`;
   showdesc.innerHTML = `${description}`;
   showicon.setAttribute("src", `${icon}`);
-  showlastupdated.innerHTML = `${lastupdated}`;
+  //showlastupdated.innerHTML = `${lastupdated}`;
 }
 
 let x = document.getElementById("cityreturn").innerHTML;
