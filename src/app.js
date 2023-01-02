@@ -1,6 +1,31 @@
+// to show last update day and time from API
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let mins = now.getMinutes();
+  if (mins < 10) {
+    mins = `0${mins}`;
+  }
+  let mapDay = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = mapDay[now.getDay()];
+  //return `mapDay[now.getDay()] + " " + hours + ": " + mins`;
+  return `${day} ${hours}:${mins}`;
+}
+/*
 //to show current day and time
 let updateCurrentDate = document.querySelector("#current_date");
-let now = new Date();
+//let now = new Date();
 console.log(now);
 let hours = now.getHours();
 if (hours < 10) {
@@ -19,9 +44,11 @@ let mapDay = [
   "Friday",
   "Saturday",
 ];
-let dayandtime = mapDay[now.getDay()] + " " + hours + ": " + mins;
 
-updateCurrentDate.innerHTML = dayandtime;
+//return `mapDay[now.getDay()] + " " + hours + ": " + mins`;
+
+//updateCurrentDate.innerHTML = dayandtime;
+*/
 
 //to change city name afterward
 function changeCity(event) {
@@ -60,13 +87,13 @@ function showWeather(response) {
   let showwind = document.querySelector("#wind");
   let showdesc = document.querySelector("#description");
   let showicon = document.querySelector("#icon");
-  let showlastupdated = document.querySelector("#last_updated");
+  let showDate = document.querySelector("#current_date");
   showtemp.innerHTML = `${celsiusTemp}°`;
   showhumi.innerHTML = `${humidity}`;
   showwind.innerHTML = `${wind}`;
   showdesc.innerHTML = `${description}`;
   showicon.setAttribute("src", `${icon}`);
-  //showlastupdated.innerHTML = `${lastupdated}`;
+  showDate.innerHTML = formatDate(response.data.time * 1000);
 }
 
 let x = document.getElementById("cityreturn").innerHTML;
